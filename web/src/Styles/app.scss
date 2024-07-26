@@ -55,11 +55,11 @@ body {
 
 .ant-tooltip-inner {
   border-radius: 5px !important;
-  background-color: #16b1ff !important;
+  background-color: #49B629 !important;
 }
 
 .ant-tooltip-arrow-content {
-  --antd-arrow-background-color: linear-gradient(to right bottom, #16b1ff, #16b1ff) !important;
+  --antd-arrow-background-color: linear-gradient(to right bottom, #49B629, #49B629) !important;
 }
 
 .ant-radio-group {
@@ -233,7 +233,7 @@ body {
     padding: 0px 0px 30px 0px;
   }
   .body-title {
-    color: $primary-color;
+    color: $primary-color !important;
     font-weight: 500;
     font-size: 1.2rem;
   }
@@ -311,7 +311,7 @@ body {
   }
 
   .anticon-edit {
-    color: #16b1ff;
+    color: #49B629;
   }
 
   .anticon-delete {
@@ -798,4 +798,20 @@ body {
 
 .programme-details-form-container .programme-details-form .selection-details-row .in-ndc-row .included-val .yes-no-radio-container .ant-radio-button-wrapper-checked:not( .ant-radio-button-wrapper-disabled ){
   border-color: $primary-color !important;
+}
+
+.stastic-card-main-container .values-section .icon-section svg{
+  fill:#49B629 !important;
+}
+.dashboard-main-container .stastics-and-charts-container .stastic-card-row .stastic-card-col .stastics-and-pie-card .total-programme-details .icon svg{
+  fill:#49B629 !important;
+}
+.stastic-card-main-container .values-section .values-and-unit .value{
+  color:#49B629 !important ;
+}
+.dashboard-main-container .stastics-and-charts-container .stastic-card-row .stastic-card-col .stastics-and-pie-card .total-programme-details .details .value{
+  color:#49B629 !important ;
+}
+.login-language-selection-container .ant-select-selection-item{
+  color:#49B629 !important ; ;
 }
