@@ -56,16 +56,16 @@ jobs:
           echo "Pushing image to ECR..."
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-      # - name: Deploy development docker image to Amazon EC2
-      #   if: github.ref == 'refs/heads/develop'
-      #   env:
-      #     PRIVATE_KEY: ${{ secrets.AWS_SSH_KEY_PRIVATE }}
-      #     HOSTNAME: ${{secrets.HOST_IP }}
-      #     USER_NAME: ec2-user
-      #   run: |
-      #     echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-      #     ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-      #       repos/panafrica-registry/backend_deploy.sh '
+      - name: Deploy development docker image to Amazon EC2
+        if: github.ref == 'refs/heads/develop'
+        env:
+          PRIVATE_KEY: ${{ secrets.AWS_SSH_KEY_PRIVATE }}
+          HOSTNAME: ${{secrets.HOST_IP }}
+          USER_NAME: ec2-user
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+            repos/panafrica-registry/backend_deploy.sh '
 
   production_deploy:
     if: github.ref == 'refs/heads/main'
