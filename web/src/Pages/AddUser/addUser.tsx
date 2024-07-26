@@ -22,7 +22,7 @@ const AddUser = () => {
       onNavigateLogin={onNavigateToLogin}
       useLocation={useLocation}
       useAbilityContext={useAbilityContext}
-      themeColor="#16b1ff"
+      themeColor="#49B629"
     ></AddNewUserComponent>
   );
 };

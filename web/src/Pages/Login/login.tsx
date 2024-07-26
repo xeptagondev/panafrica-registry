@@ -1,7 +1,7 @@
 import { Button, Col, Form, Input, message, Row, Select, Spin } from 'antd';
 import React, { FC, Suspense, useContext, useEffect, useState } from 'react';
 import './login.scss';
-import countryLogo from '../../Assets/Images/logo-slider.png';
+import countryLogo from '../../Assets/Images/pan-logo.png';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -121,8 +121,8 @@ const Login: FC<LoginPageProps> = (props: LoginPageProps) => {
                     </div>
                     <div className="login-country-name">
                       <div className="title">
-                        {'CARBON'}
-                        <span className="title-sub">{'REGISTRY'}</span>
+                        {/* {'CARBON'} */}
+                        {/* <span className="title-sub">{'REGISTRY'}</span> */}
                       </div>
 
                       <span className="country-name">

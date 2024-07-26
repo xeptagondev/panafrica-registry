@@ -74,15 +74,11 @@ const App = () => {
     <AbilityContext.Provider value={ability}>
       <ConnectionContextProvider
         serverURL={
-          process.env.REACT_APP_BACKEND
-            ? process.env.REACT_APP_BACKEND
-            : 'http://localhost:3000/local'
+          process.env.REACT_APP_BACKEND ? process.env.REACT_APP_BACKEND : 'http://localhost:3000'
         }
         t={t}
         statServerUrl={
-          process.env.REACT_APP_STAT_URL
-            ? process.env.REACT_APP_STAT_URL
-            : 'http://localhost:3100/local'
+          process.env.REACT_APP_STAT_URL ? process.env.REACT_APP_STAT_URL : 'http://localhost:3100'
         }
       >
         <UserInformationContextProvider>
@@ -98,7 +94,7 @@ const App = () => {
                 <Route path="codeconduct" element={<CodeOfConduct />} />
                 <Route path="cookie" element={<CookiePolicy />} />
                 <Route path="terms" element={<TermsOfUse />} />
-                <Route path="/" element={<Homepage />} />
+                {/* <Route path="/" element={<Homepage />} /> */}
                 <Route path="/" element={<PrivateRoute />}>
                   <Route path="/dashboard" element={<CustomLayout selectedKey="dashboard" />}>
                     <Route path="/dashboard" element={<RegistryDashboard />} />

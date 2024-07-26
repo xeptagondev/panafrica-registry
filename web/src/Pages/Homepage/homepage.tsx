@@ -81,7 +81,7 @@ const Homepage = () => {
               <Col md={6} lg={3} xs={7} flex="auto">
                 <div className="homepage-button-container">
                   <div className="button">
-                    <Button type="primary" onClick={() => navigate('/login')}>
+                    <Button type="primary" onClick={() => navigate('/')}>
                       SIGN IN
                     </Button>
                   </div>

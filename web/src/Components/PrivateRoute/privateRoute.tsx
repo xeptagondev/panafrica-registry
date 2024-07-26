@@ -5,8 +5,13 @@ import { useUserContext } from '@undp/carbon-library';
 const PrivateRoute = () => {
   const { IsAuthenticated } = useUserContext();
   const location = useLocation();
+  const currentPage = location.pathname.replace(/^\/|\/$/g, '');
   return IsAuthenticated() ? (
-    <Outlet />
+    currentPage === '' || currentPage === undefined ? (
+      <Navigate to="/dashboard" state={{ from: location }} replace />
+    ) : (
+      <Outlet />
+    )
   ) : (
     <Navigate to="/login" state={{ from: location }} replace />
   );
