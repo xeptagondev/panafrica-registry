@@ -815,3 +815,15 @@ body {
 .login-language-selection-container .ant-select-selection-item{
   color:#49B629 !important ; ;
 }
+.layout-sider-container .layout-sider-div-container .ant-menu-item-selected a:hover{
+color:#ffffff !important;
+}
+.layout-sider-container .layout-sider-div-container .ant-menu-item:hover{
+  color: #49B629;
+}
+.layout-sider-container .layout-sider-div-container .ant-menu-item-selected:hover{
+  color: #ffffff;
+}
+.layout-sider-container .layout-sider-div-container .ant-menu-item a:hover{
+  color: #49B629;
+}
