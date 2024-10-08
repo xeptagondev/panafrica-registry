@@ -306,60 +306,60 @@ const ProgrammeView = () => {
     }
   };
 
-  const drawMap = () => {
-    setTimeout(async () => {
-      if (data?.geographicalLocationCordintes && data?.geographicalLocationCordintes.length > 0) {
-        setCenterPoint(getCenter(data?.geographicalLocationCordintes));
-        const markerList = [];
-        for (const iloc in data?.geographicalLocationCordintes) {
-          if (data?.geographicalLocationCordintes[iloc] !== null) {
-            const markerData: MarkerData = {
-              color: locationColors[(Number(iloc) + 1) % locationColors.length],
-              location: data?.geographicalLocationCordintes[iloc],
-            };
+  // const drawMap = () => {
+  //   setTimeout(async () => {
+  //     if (data?.geographicalLocationCordintes && data?.geographicalLocationCordintes.length > 0) {
+  //       setCenterPoint(getCenter(data?.geographicalLocationCordintes));
+  //       const markerList = [];
+  //       for (const iloc in data?.geographicalLocationCordintes) {
+  //         if (data?.geographicalLocationCordintes[iloc] !== null) {
+  //           const markerData: MarkerData = {
+  //             color: locationColors[(Number(iloc) + 1) % locationColors.length],
+  //             location: data?.geographicalLocationCordintes[iloc],
+  //           };
 
-            markerList.push(markerData);
-          }
-        }
+  //           markerList.push(markerData);
+  //         }
+  //       }
 
-        setMarkers(markerList);
-      } else {
-        if (!accessToken || !data!.programmeProperties.geographicalLocation) return;
-        const locMarkers: MarkerData[] = [];
-        for (const address in data!.programmeProperties.geographicalLocation) {
-          const response = await Geocoding({ accessToken: accessToken })
-            .forwardGeocode({
-              query: data!.programmeProperties.geographicalLocation[address],
-              autocomplete: false,
-              limit: 1,
-              types: ['region', 'district'],
-              countries: [process.env.REACT_APP_COUNTRY_CODE || 'NG'],
-            })
-            .send();
+  //       setMarkers(markerList);
+  //     } else {
+  //       if (!accessToken || !data!.programmeProperties.geographicalLocation) return;
+  //       const locMarkers: MarkerData[] = [];
+  //       for (const address in data!.programmeProperties.geographicalLocation) {
+  //         const response = await Geocoding({ accessToken: accessToken })
+  //           .forwardGeocode({
+  //             query: data!.programmeProperties.geographicalLocation[address],
+  //             autocomplete: false,
+  //             limit: 1,
+  //             types: ['region', 'district'],
+  //             countries: [process.env.REACT_APP_COUNTRY_CODE || 'NG'],
+  //           })
+  //           .send();
 
-          if (
-            !response ||
-            !response.body ||
-            !response.body.features ||
-            !response.body.features.length
-          ) {
-            console.error('Invalid response:');
-            console.error(response);
-            return;
-          }
-          const feature = response.body.features[0];
-          setCenterPoint(feature.center);
+  //         if (
+  //           !response ||
+  //           !response.body ||
+  //           !response.body.features ||
+  //           !response.body.features.length
+  //         ) {
+  //           console.error('Invalid response:');
+  //           console.error(response);
+  //           return;
+  //         }
+  //         const feature = response.body.features[0];
+  //         setCenterPoint(feature.center);
 
-          const marker: MarkerData = {
-            color: locationColors[(Number(address) + 1) % locationColors.length],
-            location: feature.center,
-          };
-          locMarkers.push(marker);
-        }
-        setMarkers(locMarkers);
-      }
-    }, 1000);
-  };
+  //         const marker: MarkerData = {
+  //           color: locationColors[(Number(address) + 1) % locationColors.length],
+  //           location: feature.center,
+  //         };
+  //         locMarkers.push(marker);
+  //       }
+  //       setMarkers(locMarkers);
+  //     }
+  //   }, 1000);
+  // };
 
   const genPieData = (d: ProgrammeU) => {
     // ['Authorised', 'Issued', 'Transferred', 'Retired', 'Frozen']
@@ -1414,7 +1414,7 @@ const ProgrammeView = () => {
           ? Number(data?.emissionReductionAchieved)
           : 0
       );
-      drawMap();
+      // drawMap();
       for (const company of data.company) {
         if (
           parseInt(company.state) === CompanyState.ACTIVE.valueOf() &&
@@ -1432,7 +1432,7 @@ const ProgrammeView = () => {
       getInvestmentHistory(data?.programmeId);
       getProgrammeHistory(data.programmeId);
       getDocuments(data?.programmeId);
-      drawMap();
+      // drawMap();
       for (const company of data.company) {
         if (
           parseInt(company.state) === CompanyState.ACTIVE.valueOf() &&
@@ -2371,7 +2371,7 @@ const ProgrammeView = () => {
                 <InfoView data={generalInfo} title={t('view:general')} icon={<BulbOutlined />} />
               </div>
             </Card>
-            {mapType !== MapTypes.None ? (
+            {/* {mapType !== MapTypes.None ? (
               <Card className="card-container">
                 <div className="info-view">
                   <div className="title">
@@ -2413,7 +2413,7 @@ const ProgrammeView = () => {
               </Card>
             ) : (
               ''
-            )}
+            )} */}
             {certs.length > 0 ? (
               <Card className="card-container">
                 <div className="info-view">
