@@ -1960,13 +1960,13 @@
     picomatch "^2.2.2"
 
 "@rollup/pluginutils@^5.0.1", "@rollup/pluginutils@^5.1.0":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.1.2.tgz#d3bc9f0fea4fd4086aaac6aa102f3fa587ce8bd9"
-  integrity sha512-/FIdS3PyZ39bjZlwqFnWqCOVnW7o963LtKMwQOD0NhQqw22gSr2YY1afu3FxRip4ZCZNsD5jq6Aaz6QV3D/Njw==
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.1.3.tgz#3001bf1a03f3ad24457591f2c259c8e514e0dbdf"
+  integrity sha512-Pnsb6f32CD2W3uCaLZIzDmeFyQ2b8UWMFI7xtwUezpcGBDVDW6y9XgAWIlARiGAo6eNF5FK5aQTr0LFyNyqq5A==
   dependencies:
     "@types/estree" "^1.0.0"
     estree-walker "^2.0.2"
-    picomatch "^2.3.1"
+    picomatch "^4.0.2"
 
 "@rushstack/eslint-patch@^1.1.0":
   version "1.3.2"
@@ -2761,10 +2761,10 @@
     "@types/node" "^18.11.9"
     convert-units "^2.3.4"
 
-"@undp/carbon-library@2.1.13-PAN-1.7":
-  version "2.1.13-PAN-1.7"
-  resolved "https://registry.yarnpkg.com/@undp/carbon-library/-/carbon-library-2.1.13-PAN-1.7.tgz#b079e7882d3cbd7946e6e076eff5c5e2111ea946"
-  integrity sha512-Lctx3uh4D54H2G3QDO/JbREF8fYEsnrPFCa4g0ZDDM7m4yjGwmekzxN4Y/ZW6LqYMAw80XWUDbdTnVi/qDMkeQ==
+"@undp/carbon-library@2.1.13-PAN-1.21":
+  version "2.1.13-PAN-1.21"
+  resolved "https://registry.yarnpkg.com/@undp/carbon-library/-/carbon-library-2.1.13-PAN-1.21.tgz#0e633a01d8eef09ffa7d917d5423876e264bb614"
+  integrity sha512-1rRc3n+5INqozbOpKEIxlbzl3IcpZO00eyIlu+yYxgMoJaGYK3JyfoRSHKBzp43FenheAnCzQ0mITa/wt+NHnQ==
   dependencies:
     "@rollup/plugin-commonjs" "^25.0.0"
     "@rollup/plugin-json" "^6.0.1"
@@ -9020,6 +9020,11 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3, picomatc
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+picomatch@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.2.tgz#77c742931e8f3b8820946c76cd0c1f13730d1dab"
+  integrity sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==
 
 pidtree@^0.6.0:
   version "0.6.0"
